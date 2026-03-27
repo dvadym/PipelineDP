@@ -14,20 +14,30 @@ dependencies = [
 ]
 
 [tool.poetry.group.dev.dependencies]
+# Code Quality & Linting
 yapf = "^0.43.0"
-twine = "^3.7.1"
-pytest = "^6.2.5"
-pytest-timeout = "^2.1.0"
-pylint = "^2.15.0"
-wheel = "^0.37.1"
-setuptools = "^60.5.0"
-scipy = "^1.9.3"
-pyspark = "^3.4.4"
-apache-beam = "^2.48.0"
-dp-accounting = "^0.6.0"
-poetry-core = "^1.6.0"
+pylint = "^3.2.0"          # Python 3.12+ AST changes require Pylint 3.x
+
+# Testing
+pytest = "^8.2.0"          # Better Python 3.12+ support
+pytest-timeout = "^2.3.1"
+
+# Building & Packaging
+twine = "^6.0.0"           # Modern metadata & PyPI publishing
+wheel = "^0.45.0"
+setuptools = "^75.0.0"     # Modern PEP 517/621 improvements
+poetry-core = "^2.0.0"     # Keeping up with poetry spec
+
+# Data Science & Heavy Compute (Supporting Py3.11 - 3.14 & NumPy 2.x)
+scipy = "^1.14.0"          # Official Python 3.13 & NumPy 2.x wheels
+pandas = "^2.2.0"
+pyspark = "^3.5.0"         # Minimum for modern Python runtimes; if you can, use >=4.0.0 for Py3.13+
+apache-beam = "^2.70.0"    # Added official Py 3.13 support
+dp-accounting = "^0.6.0"   # Fine as is if it's pure-python, otherwise ^0.7.0+ if available
+
+# Versioning & Utilities
 bump-my-version = "^1.2.1"
-absl-py = "^1.4.0"
+absl-py = "^2.1.0"
 
 [tool.yapf]
 based_on_style = "google"
