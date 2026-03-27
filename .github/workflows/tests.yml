@@ -35,7 +35,7 @@ jobs:
 
   test:
     runs-on: ${{ matrix.os }}
-#    needs: [linting] # for debug
+    needs: [linting]
     strategy:
       fail-fast: false
       max-parallel: 5
