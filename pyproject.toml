@@ -4,11 +4,11 @@ version = "0.2.2rc2"
 description = "A library for differentially private data analysis pipelines."
 authors = [{ name = "Chinmay Shah", email = "chinmayshah3899@gmail.com" }, { name = "Vadym Doroshenko", email = "dvadym@google.com" }]
 license = { text = "Apache-2.0" }
-requires-python = ">=3.9,<3.12"
+requires-python = ">=3.11,<3.15"
 keywords = ["differential privacy", "data analysis", "apache beam", "pyspark", "dp"]
 
 dependencies = [
-    "python-dp (>=1.1.5rc4,<2.0.0)",
+    "python-dp (>=1.1.5rc11,<2.0.0)",
     "numpy (>=1.20.1,<2.0.0)",
     "dill (>=0.3.7)",
 ]
@@ -25,7 +25,7 @@ scipy = "^1.9.3"
 pandas = "^1.4.0"
 pyspark = "^3.4.4"
 apache-beam = "^2.48.0"
-dp-accounting = "^0.5.0"
+dp-accounting = "^0.6.0"
 poetry-core = "^1.6.0"
 bump-my-version = "^1.2.1"
 absl-py = "^1.4.0"

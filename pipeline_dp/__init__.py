@@ -37,7 +37,7 @@ from pipeline_dp.beam_backend import BeamBackend
 from pipeline_dp.private_beam import MakePrivate
 from pipeline_dp.private_beam import PrivatePCollection
 
-__version__ = '0.2.2rc2'
+__version__ = '0.3.0rc1'
 
 __all__ = [
     'AggregateParams',
