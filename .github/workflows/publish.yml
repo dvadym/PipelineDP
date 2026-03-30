@@ -57,7 +57,7 @@ jobs:
           echo "::set-output name=dir::$(poetry config cache-dir)"
 
       - name: poetry cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ${{ steps.poetry-cache.outputs.dir }}
           key: ${{ runner.os }}-pip-py${{ matrix.python-version }}-${{ hashFiles('**/pyproject.toml') }}
