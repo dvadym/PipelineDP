@@ -64,8 +64,15 @@ __all__ = [
     'LocalBackend',
     'SparkRDDBackend',
     'BeamBackend',
-    'MakePrivate',
-    'PrivatePCollection',
     'AdvancedQueryBuilder',
     'ExplainComputationReport',
 ]
+
+try:
+    from pipeline_dp.private_beam import MakePrivate
+    from pipeline_dp.private_beam import PrivatePCollection
+
+    __all__.extend(['MakePrivate', 'PrivatePCollection'])
+except (AttributeError, ImportError):
+    # It can fail if Apache Beam is not installed. Other backends can be used.
+    pass
