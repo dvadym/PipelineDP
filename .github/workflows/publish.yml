@@ -68,9 +68,8 @@ jobs:
         run: |
           poetry install
 
-      - name: Build PipelineDP Linux
-        run: |
-          poetry run python setup.py bdist_wheel
+      - name: Build package
+        run: poetry build
 
       - name: Install Wheel Unix
         if: runner.os != 'Windows'
