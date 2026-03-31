@@ -73,6 +73,6 @@ try:
     from pipeline_dp.private_beam import PrivatePCollection
 
     __all__.extend(['MakePrivate', 'PrivatePCollection'])
-except (AttributeError, ImportError):
+except (AttributeError, ImportError, ModuleNotFoundError):
     # It can fail if Apache Beam is not installed. Other backends can be used.
     pass
